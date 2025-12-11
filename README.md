@@ -9,7 +9,7 @@ Before scraping any website, you should:
   - Add a short time.sleep(1) between requests.
 3. Keep it small and reasonable
 
-## Tools you’ll use
+## Tools used
 We’ll use Python plus two very common libraries:
   - `requests` – to download the HTML.
   - `beautifulsoup4` – to parse the HTML and pull out tables.
@@ -22,35 +22,6 @@ pip3 install requests beautifulsoup4
 ```
 Optionally use a virtualenv
 
-## Minimal scraping example (one page)
-Here’s a minimal “hello, scraper” to show the idea.
-```python
-import requests
-from bs4 import BeautifulSoup
-
-url = "https://front9farm.com/index.php/2017-csa-week-1-recipes"
-resp = requests.get(url)
-resp.raise_for_status()  # will error if the request failed
-
-soup = BeautifulSoup(resp.text, "html.parser")
-
-# Find all tables on the page
-tables = soup.find_all("table")
-print(f"Found {len(tables)} tables on {url}")
-
-# Print the text of each row in the first table
-if tables:
-    first_table = tables[0]
-    for row in first_table.find_all("tr"):
-        cells = [c.get_text(strip=True) for c in row.find_all(["td", "th"])]
-        print(cells)
-```
-Run with:
-```bash
-python3 test_scrape.py
-```
-You’ll see the first table’s rows printed out. That’s the core of scraping: fetch → parse → extract.
-
 ## Applying it to the CSA pattern
 Each page 2017-csa-week-#-recipes has:
   - Table with CSA contents (week’s share).
@@ -61,202 +32,199 @@ The exact HTML order might be 2 or 3 tables; the safest approach is:
   - Print them once to see which index is which.
   - Then lock in those indexes in code.
 
-## A scraper tailored to your CSA data
-Save this as scrape_csa.py:
+## Test scraper for CSA data
+Save this as scrape_week1.py:
 ```python
-import csv
-import time
-import re
 import requests
+
+url = "https://front9farm.com/index.php/2017-csa-week-1-recipes"
+html_file = "week1.html"
+
+response = requests.get(url)
+response.raise_for_status()
+
+with open(html_file, "w", encoding=response.encoding or "utf-8") as f:
+    f.write(response.text)
+
+print(f"Saved HTML for Week 1 to {html_file}")
+```
+Run it with `python parse_week1.py`
+
+Open the file: `xdg-open week1.html`
+
+## Test parser for CSA data
+Save this as parse_week1.py:
+```python
+import json
+import re
 from bs4 import BeautifulSoup
 
-BASE_URL = "https://front9farm.com/index.php/2017-csa-week-{}-recipes"
+URL_WEEK_1 = "https://front9farm.com/index.php/2017-csa-week-1-recipes"
+HTML_FILE = "week1.html"
 
-# Weeks you still need
-WEEKS = list(range(10, 27))  # 10–26 inclusive
 
-def clean_item(text: str) -> str:
+def clean_name(text: str) -> str:
     """
-    Normalize ingredient or produce name like you did manually:
-    - lowercase
-    - remove commas and parentheses text
-    - remove extra measurement words/numbers (roughly)
-    - spaces -> underscores
+    Normalize an item name like:
+      'Baby oakleaf lettuce (about 96g)' -> 'oakleaf_lettuce'
+      'Chicken breast (2-3 lb)'          -> 'chicken_breast'
+    Rules:
+      - lowercase
+      - remove text in parentheses
+      - remove digits
+      - remove some filler/measurement words
+      - replace spaces with underscores
+      - strip stray punctuation/underscores
     """
-    text = text.strip().lower()
+    t = text.strip().lower()
 
-    # remove text in parentheses
-    text = re.sub(r"\(.*?\)", "", text)
+    # Remove text in parentheses: "(about 96g)"
+    t = re.sub(r"\(.*?\)", "", t)
 
-    # remove numbers and common measurement words
-    # (you can refine this list as you see patterns)
-    measurement_words = [
-        "cup", "cups", "tbsp", "tablespoon", "tablespoons",
-        "tsp", "teaspoon", "teaspoons", "pound", "pounds",
-        "oz", "ounce", "ounces", "clove", "cloves", "bunch",
-        "head", "heads", "large", "small", "medium"
-    ]
-    # remove digits
-    text = re.sub(r"\d+", "", text)
+    # Remove digits
+    t = re.sub(r"\d+", "", t)
 
-    # remove commas and periods
-    text = text.replace(",", " ").replace(".", " ")
+    # Replace commas and slashes with spaces
+    t = t.replace(",", " ").replace("/", " ")
 
-    # remove measurement words
-    parts = text.split()
-    parts = [p for p in parts if p not in measurement_words]
+    # Words we want to drop (tweak this as you inspect more data)
+    drop_words = {
+        "about", "g", "lb", "lbs", "quart", "cup", "cups",
+        "tsp", "tbsp", "pinches", "large", "small", "medium",
+        "clove", "cloves", "russets", "potatoes", "potato",
+        "of"
+    }
 
-    # collapse multiple spaces
-    text = " ".join(parts)
+    # Optionally drop adjectives like "baby" if you want to match your hand data
+    # e.g. "baby oakleaf lettuce" -> "oakleaf lettuce"
+    adjective_drop = {"baby"}
 
-    # spaces -> underscores
-    text = text.replace(" ", "_")
+    words = t.split()
+    kept = []
+    for w in words:
+        if w in drop_words or w in adjective_drop:
+            continue
+        kept.append(w)
 
-    # strip stray underscores
-    text = text.strip("_")
+    t = "_".join(kept)
+    t = t.strip("_")
+    return t
 
-    return text
+
+def load_soup(html_file: str) -> BeautifulSoup:
+    with open(html_file, "r", encoding="utf-8") as f:
+        html = f.read()
+    return BeautifulSoup(html, "html.parser")
 
 
-def extract_tables(url: str):
-    """Download page and return all tables as list-of-rows (each row is list-of-cell-text)."""
-    resp = requests.get(url)
-    resp.raise_for_status()
-    soup = BeautifulSoup(resp.text, "html.parser")
+def find_week1_tables(soup: BeautifulSoup):
+    """
+    Find the two tables that match the snippet you pasted:
+    Both have a header row whose <td> cells include 'Lovage Soup'.
+    We treat:
+      - first such table  -> CSA contents
+      - second such table -> extra ingredients
+    """
+    target_tables = []
 
-    tables_data = []
     for table in soup.find_all("table"):
-        rows_data = []
-        for row in table.find_all("tr"):
-            cells = row.find_all(["td", "th"])
-            row_text = [c.get_text(strip=True) for c in cells]
-            # skip empty rows
-            if any(row_text):
-                rows_data.append(row_text)
-        if rows_data:
-            tables_data.append(rows_data)
-    return tables_data
+        first_row = table.find("tr")
+        if not first_row:
+            continue
+        row_text = first_row.get_text(separator=" ", strip=True)
+        if "Lovage Soup" in row_text:
+            target_tables.append(table)
+
+    if len(target_tables) != 2:
+        raise RuntimeError(f"Expected 2 tables with 'Lovage Soup', found {len(target_tables)}")
+
+    csa_table = target_tables[0]
+    ingredients_table = target_tables[1]
+    return csa_table, ingredients_table
 
 
-def get_csa_data_for_week(week: int):
-    url = BASE_URL.format(week)
-    print(f"Scraping week {week}: {url}")
-    tables = extract_tables(url)
+def extract_recipes_from_header_row(table) -> list[str]:
+    """
+    From the first row of the table, grab recipe names from the <td> cells.
+    This row looks like:
+      <td></td>
+      <td>Lovage Soup</td>
+      <td>Spring Greens Salad</td>
+      ...
+    We ignore the first empty cell.
+    """
+    first_row = table.find("tr")
+    if not first_row:
+        return []
 
-    if len(tables) < 2:
-        raise ValueError(f"Unexpected table structure on {url}: found {len(tables)} tables")
+    tds = first_row.find_all("td")
+    recipes = [td.get_text(strip=True) for td in tds if td.get_text(strip=True)]
+    return recipes
 
-    # --- Step 1: inspect for one week manually ---
-    # For your first run, uncomment this block to see what's what:
-    # for i, t in enumerate(tables):
-    #     print(f"\n=== TABLE {i} ===")
-    #     for row in t:
-    #         print(row)
-    # After you see the structure, set these indexes appropriately:
 
-    # Here I'm *assuming*:
-    # tables[0] -> CSA contents
-    # tables[1] -> recipe names
-    # tables[2] -> extra ingredients
-    # If the site only has 2 tables, it might be:
-    # 0 = CSA, 1 = extra ingredients, and recipe names come from headings instead.
-    # Adjust as necessary after you inspect.
+def extract_csa_items(csa_table) -> list[str]:
+    """
+    CSA items come from the <th> cells in the first table (excluding the header row).
+    For each row, we take the text of the <th> in column 0.
+    """
+    items = []
+    rows = csa_table.find_all("tr")[1:]  # skip header row
+    for tr in rows:
+        th = tr.find("th")
+        if not th:
+            continue
+        raw = th.get_text(strip=True)
+        cleaned = clean_name(raw)
+        if cleaned:
+            items.append(cleaned)
+    return items
 
-    csa_table_index = 0
-    recipe_names_table_index = 1
-    extra_ingredients_table_index = 2 if len(tables) > 2 else 1  # adjust if needed
 
-    # CSA contents row(s)
-    # Often it's a single row of items. Here we'll flatten all rows except header.
-    csa_rows = tables[csa_table_index][1:]  # skip header row if present
-    csa_items = []
-    for row in csa_rows:
-        for cell in row:
-            if cell:
-                csa_items.append(clean_item(cell))
-    csa_items = [i for i in csa_items if i]  # remove empties
-
-    # Recipe names:
-    # If the recipe names table has a header then one row per recipe,
-    # you might want to skip the header.
-    recipe_rows = tables[recipe_names_table_index][1:]  # skip header
-    recipe_names = []
-    for row in recipe_rows:
-        # sometimes a row may be [recipe_name] or [index, recipe_name]
-        # so we take the last cell
-        recipe_name = row[-1]
-        recipe_names.append(recipe_name.strip())
-
-    # Extra ingredients:
-    extra_rows = tables[extra_ingredients_table_index][1:]  # skip header
-    extra_items = []
-    for row in extra_rows:
-        for cell in row:
-            if cell:
-                extra_items.append(clean_item(cell))
-    extra_items = [i for i in extra_items if i]
-
-    return url, csa_items, recipe_names, extra_items
+def extract_ingredients(ingredients_table) -> list[str]:
+    """
+    Ingredients come from the <th> cells in the second table (excluding the header row).
+    Similar logic to extract_csa_items.
+    """
+    items = []
+    rows = ingredients_table.find_all("tr")[1:]  # skip header row
+    for tr in rows:
+        th = tr.find("th")
+        if not th:
+            continue
+        raw = th.get_text(strip=True)
+        cleaned = clean_name(raw)
+        if cleaned:
+            items.append(cleaned)
+    return items
 
 
 def main():
-    # Write to a CSV file that you can merge with your existing one.
-    # The layout here matches your pattern:
-    # line 1: url
-    # line 2: csa contents (comma separated)
-    # line 3: recipe names
-    # line 4: extra ingredients
-    with open("csa_weeks_10_26_scraped.csv", "w", newline="") as f:
-        writer = csv.writer(f)
+    soup = load_soup(HTML_FILE)
+    csa_table, ingredients_table = find_week1_tables(soup)
 
-        for week in WEEKS:
-            try:
-                url, csa_items, recipe_names, extra_items = get_csa_data_for_week(week)
-            except Exception as e:
-                print(f"Error on week {week}: {e}")
-                continue
+    recipes = extract_recipes_from_header_row(csa_table)
+    csa_items = extract_csa_items(csa_table)
+    ingredients = extract_ingredients(ingredients_table)
 
-            # Line 1: URL (then empty columns to match your style)
-            writer.writerow([url])
+    data = {
+        "2017_week_1": {
+            "url": URL_WEEK_1,
+            "csa_items": csa_items,
+            "recipes": recipes,
+            # if you really want to match your previous key spelling:
+            # "ingrediants": ingredients
+            "ingredients": ingredients,
+        }
+    }
 
-            # Line 2: CSA contents
-            writer.writerow(csa_items)
-
-            # Line 3: Recipe names (leave them as normal strings, not cleaned)
-            writer.writerow(recipe_names)
-
-            # Line 4: extra ingredients
-            writer.writerow(extra_items)
-
-            # Optional blank line between weeks for readability
-            writer.writerow([])
-
-            # Be polite to the server
-            time.sleep(1)
-
-    print("Done. See csa_weeks_10_26_scraped.csv")
+    print(json.dumps(data, indent=2))
 
 
 if __name__ == "__main__":
     main()
 ```
+Run it with `python parse_week1.py`
 
-## Dial it in
-The one critical “tuning” step:
-  - Run get_csa_data_for_week for a single week (e.g., 10).
-  - Temporarily uncomment the “inspect tables” block:
-```python
-    # for i, t in enumerate(tables):
-    #     print(f"\n=== TABLE {i} ===")
-    #     for row in t:
-    #         print(row)
-```
-  - Run the script for one week only (comment out others).
-  - See which table index is CSA, which is recipes, which is extra ingredients.
-  - Set:
-```python
-csa_table_index = ...
-recipe_names_table_index = ...
-extra_ingredients_table_index = ...
-```
-Once that’s correct for one week, it should be consistent for all weeks (if the site structure is consistent).
+Make sure the Json properly output in the terminal.
+
+Then dial it in for weeks 1-26
