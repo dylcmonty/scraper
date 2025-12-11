@@ -1,9 +1,9 @@
 {
   {"2017_week_1": 
   "url": "https://front9farm.com/index.php/2017-csa-week-1-recipes", 
-  "csa_items": [lovage,sage,collard greens,oakleaf_lettuce,oregano,green_onion,cilantro,parsley,thyme,eggs], 
-  "recipes": [Lovage Soup,Spring Greens Salad,Chicken & Braised Greens,Balsamic Chicken Salad,Chimichurri Breakfast Bowl], 
-  "ingrediants": [chicken_breast,chicken_stock,butter,Garlic,red_pepper_flakes,yellow_onion,russet_potato,dijon_mustard,Olive oil,Quinoa,red_wine_vinegar,Heavy cream,Salt,Pepper]
+  "csa_items": ["lovage", "sage", "collard_greens" , "oakleaf_lettuce", "oregano", "green_onion", "cilantro", "parsley", "thyme", "eggs"], 
+  "recipes": ["Lovage Soup", "Spring Greens Salad", "Chicken & Braised Greens", "Balsamic Chicken Salad", "Chimichurri Breakfast Bowl"], 
+  "ingrediants": ["chicken_breast", "chicken_stock", "butter", "garlic", "red_pepper_flakes", "yellow_onion", "russet_potato", "dijon_mustard", "olive_oil", "quinoa", "red_wine_vinegar", "heavy_cream", "salt", "pepper"]
   }, 
   {"week_2": 
   "url": "https://front9farm.com/index.php/2017-csa-week-2-recipes", 
@@ -54,97 +54,97 @@
   "ingrediants": [tomato_paste,pork_sausage,russet_potato,yellow_onion,mayonnaise,sour_cream,garlic,Flour,white_vinegar,olive_oil,dijon_mustard,lemons,salt,pepper]
   }, 
   {"week_#": 
-  "url": "https://front9farm.com/index.php/2017-csa-week-#-recipes", 
+  "url": "https://front9farm.com/index.php/2017-csa-week-10-recipes", 
   "csa_items": [HERE], 
   "recipes": [HERE], 
   "ingrediants": [HERE]
   }, 
   {"week_#": 
-  "url": "https://front9farm.com/index.php/2017-csa-week-#-recipes", 
+  "url": "https://front9farm.com/index.php/2017-csa-week-11-recipes", 
   "csa_items": [HERE], 
   "recipes": [HERE], 
   "ingrediants": [HERE]
   }, 
   {"week_#": 
-  "url": "https://front9farm.com/index.php/2017-csa-week-#-recipes", 
+  "url": "https://front9farm.com/index.php/2017-csa-week-12-recipes", 
   "csa_items": [HERE], 
   "recipes": [HERE], 
   "ingrediants": [HERE]
   }, 
   {"week_#": 
-  "url": "https://front9farm.com/index.php/2017-csa-week-#-recipes", 
+  "url": "https://front9farm.com/index.php/2017-csa-week-13-recipes", 
   "csa_items": [HERE], 
   "recipes": [HERE], 
   "ingrediants": [HERE]
   }, 
   {"week_#": 
-  "url": "https://front9farm.com/index.php/2017-csa-week-#-recipes", 
+  "url": "https://front9farm.com/index.php/2017-csa-week-14-recipes", 
   "csa_items": [HERE], 
   "recipes": [HERE], 
   "ingrediants": [HERE]
   }, 
   {"week_#": 
-  "url": "https://front9farm.com/index.php/2017-csa-week-#-recipes", 
+  "url": "https://front9farm.com/index.php/2017-csa-week-15-recipes", 
   "csa_items": [HERE], 
   "recipes": [HERE], 
   "ingrediants": [HERE]
   }, 
   {"week_#": 
-  "url": "https://front9farm.com/index.php/2017-csa-week-#-recipes", 
+  "url": "https://front9farm.com/index.php/2017-csa-week-16-recipes", 
   "csa_items": [HERE], 
   "recipes": [HERE], 
   "ingrediants": [HERE]
   }, 
   {"week_#": 
-  "url": "https://front9farm.com/index.php/2017-csa-week-#-recipes", 
+  "url": "https://front9farm.com/index.php/2017-csa-week-17-recipes", 
   "csa_items": [HERE], 
   "recipes": [HERE], 
   "ingrediants": [HERE]
   }, 
   {"week_#": 
-  "url": "https://front9farm.com/index.php/2017-csa-week-#-recipes", 
+  "url": "https://front9farm.com/index.php/2017-csa-week-18-recipes", 
   "csa_items": [HERE], 
   "recipes": [HERE], 
   "ingrediants": [HERE]
   }, 
   {"week_#": 
-  "url": "https://front9farm.com/index.php/2017-csa-week-#-recipes", 
+  "url": "https://front9farm.com/index.php/2017-csa-week-19-recipes", 
   "csa_items": [HERE], 
   "recipes": [HERE], 
   "ingrediants": [HERE]
   }, 
   {"week_#": 
-  "url": "https://front9farm.com/index.php/2017-csa-week-#-recipes", 
+  "url": "https://front9farm.com/index.php/2017-csa-week-20-recipes", 
   "csa_items": [HERE], 
   "recipes": [HERE], 
   "ingrediants": [HERE]
   }, 
   {"week_#": 
-  "url": "https://front9farm.com/index.php/2017-csa-week-#-recipes", 
+  "url": "https://front9farm.com/index.php/2017-csa-week-21-recipes", 
   "csa_items": [HERE], 
   "recipes": [HERE], 
   "ingrediants": [HERE]
   }, 
   {"week_#": 
-  "url": "https://front9farm.com/index.php/2017-csa-week-#-recipes", 
+  "url": "https://front9farm.com/index.php/2017-csa-week-22-recipes", 
   "csa_items": [HERE], 
   "recipes": [HERE], 
   "ingrediants": [HERE]
   }, 
   {"week_#": 
-  "url": "https://front9farm.com/index.php/2017-csa-week-#-recipes", 
+  "url": "https://front9farm.com/index.php/2017-csa-week-23-recipes", 
   "csa_items": [HERE], 
   "recipes": [HERE], 
   "ingrediants": [HERE]
   }, 
   {"week_#": 
-  "url": "https://front9farm.com/index.php/2017-csa-week-#-recipes", 
+  "url": "https://front9farm.com/index.php/2017-csa-week-24-recipes", 
   "csa_items": [HERE], 
   "recipes": [HERE], 
   "ingrediants": [HERE]
   }, 
   {"week_#": 
-  "url": "https://front9farm.com/index.php/2017-csa-week-#-recipes", 
+  "url": "https://front9farm.com/index.php/2017-csa-week-25-recipes", 
   "csa_items": [HERE], 
   "recipes": [HERE], 
   "ingrediants": [HERE]
@@ -156,3 +156,4 @@
   "ingrediants": [HERE]
   }, 
 }
+
