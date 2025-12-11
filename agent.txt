@@ -1,0 +1,5 @@
+Now I want to adapt the python file 'scrape_weeks_1_26.py' (appropriately renamed scrape_csa_hauls.py) so that it similarly retrieves each week for years 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, and 2025.
+Additionally I want to have it isolate each recipe so that, in addition to the 'csa_items' key value array that should now be stored in a different JSON file called 'csa_hauls.json', in another JSON file called 'csa_recipes.json' it also produces 5 dictionaries for each of the 5 expected recipes that each hold an array for csa items used and for additional ingredients used. However, it should not carry over the measurements, only determine if the cell for each respective column of a particular recipe is empty or not.
+
+See Reference HTML and old 'scrape_weeks_1_26.py' in the GitHub Repo.
+Also see example csa_recipes.json and csa_hauls.json for week 1( notice for csa_hauls.json that the time stamp, 'time_stamp', is the Monday of that year's week's Monday, starting with the first Monday in May. Also there is no need to to download the imgs, these are already in the right places.)
