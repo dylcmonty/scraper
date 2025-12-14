@@ -1,0 +1,1144 @@
+{
+  "ingredients": [
+    {
+      "ingredients_id": "003",
+      "alias": "all_spice"
+    },
+    {
+      "ingredients_id": "004",
+      "alias": "allspice"
+    },
+    {
+      "ingredients_id": "005",
+      "alias": "almonds"
+    },
+    {
+      "ingredients_id": "007",
+      "alias": "anchovies"
+    },
+    {
+      "ingredients_id": "012",
+      "alias": "angel_hair_pasta"
+    },
+    {
+      "ingredients_id": "015",
+      "alias": "apple_cider_vinegar"
+    },
+    {
+      "ingredients_id": "019",
+      "alias": "apples"
+    },
+    {
+      "ingredients_id": "024",
+      "alias": "avocado"
+    },
+    {
+      "ingredients_id": "025",
+      "alias": "bacon"
+    },
+    {
+      "ingredients_id": "028",
+      "alias": "baguette"
+    },
+    {
+      "ingredients_id": "030",
+      "alias": "balsamic_vinegar"
+    },
+    {
+      "ingredients_id": "033",
+      "alias": "barley"
+    },
+    {
+      "ingredients_id": "035",
+      "alias": "basil"
+    },
+    {
+      "ingredients_id": "037",
+      "alias": "basmati_rice"
+    },
+    {
+      "ingredients_id": "040",
+      "alias": "bay_leaves"
+    },
+    {
+      "ingredients_id": "041",
+      "alias": "beef"
+    },
+    {
+      "ingredients_id": "042",
+      "alias": "beef_steak"
+    },
+    {
+      "ingredients_id": "043",
+      "alias": "beef_stock"
+    },
+    {
+      "ingredients_id": "045",
+      "alias": "bell_peppers"
+    },
+    {
+      "ingredients_id": "047",
+      "alias": "black_beans"
+    },
+    {
+      "ingredients_id": "048",
+      "alias": "black_eyed_peas"
+    },
+    {
+      "ingredients_id": "050",
+      "alias": "blue_cheese"
+    },
+    {
+      "ingredients_id": "052",
+      "alias": "blueberries"
+    },
+    {
+      "ingredients_id": "053",
+      "alias": "bratwurst"
+    },
+    {
+      "ingredients_id": "054",
+      "alias": "bread_loaf"
+    },
+    {
+      "ingredients_id": "056",
+      "alias": "bread_flour"
+    },
+    {
+      "ingredients_id": "060",
+      "alias": "bread_crumbs"
+    },
+    {
+      "ingredients_id": "064",
+      "alias": "broth"
+    },
+    {
+      "ingredients_id": "066",
+      "alias": "brown_rice"
+    },
+    {
+      "ingredients_id": "068",
+      "alias": "brown_sugar"
+    },
+    {
+      "ingredients_id": "069",
+      "alias": "buckwheat"
+    },
+    {
+      "ingredients_id": "070",
+      "alias": "buffy_squash"
+    },
+    {
+      "ingredients_id": "073",
+      "alias": "burger_buns"
+    },
+    {
+      "ingredients_id": "074",
+      "alias": "butter"
+    },
+    {
+      "ingredients_id": "077",
+      "alias": "cabbage"
+    },
+    {
+      "ingredients_id": "078",
+      "alias": "cajun_seasoning"
+    },
+    {
+      "ingredients_id": "081",
+      "alias": "cannellini_beans"
+    },
+    {
+      "ingredients_id": "082",
+      "alias": "canola_oil"
+    },
+    {
+      "ingredients_id": "084",
+      "alias": "capers"
+    },
+    {
+      "ingredients_id": "088",
+      "alias": "carrot_greens"
+    },
+    {
+      "ingredients_id": "089",
+      "alias": "carrots"
+    },
+    {
+      "ingredients_id": "094",
+      "alias": "cayenne_pepper"
+    },
+    {
+      "ingredients_id": "095",
+      "alias": "celery"
+    },
+    {
+      "ingredients_id": "096",
+      "alias": "celery_seed"
+    },
+    {
+      "ingredients_id": "100",
+      "alias": "cheddar_cheese"
+    },
+    {
+      "ingredients_id": "111",
+      "alias": "chicken"
+    },
+    {
+      "ingredients_id": "122",
+      "alias": "chicken_stock"
+    },
+    {
+      "ingredients_id": "127",
+      "alias": "chili_flakes"
+    },
+    {
+      "ingredients_id": "131",
+      "alias": "chili_powder"
+    },
+    {
+      "ingredients_id": "132",
+      "alias": "chips"
+    },
+    {
+      "ingredients_id": "137",
+      "alias": "chorizo"
+    },
+    {
+      "ingredients_id": "142",
+      "alias": "ciabatta_bun"
+    },
+    {
+      "ingredients_id": "144",
+      "alias": "cilantro"
+    },
+    {
+      "ingredients_id": "145",
+      "alias": "cinnamon"
+    },
+    {
+      "ingredients_id": "147",
+      "alias": "cinnamon_stick"
+    },
+    {
+      "ingredients_id": "148",
+      "alias": "coconut_milk"
+    },
+    {
+      "ingredients_id": "150",
+      "alias": "confectioners_sugar"
+    },
+    {
+      "ingredients_id": "151",
+      "alias": "chicken_breast"
+    },
+    {
+      "ingredients_id": "155",
+      "alias": "chorizo"
+    },
+    {
+      "ingredients_id": "157",
+      "alias": "rice"
+    },
+    {
+      "ingredients_id": "166",
+      "alias": "coriander"
+    },
+    {
+      "ingredients_id": "167",
+      "alias": "coriander_seed"
+    },
+    {
+      "ingredients_id": "168",
+      "alias": "corn"
+    },
+    {
+      "ingredients_id": "171",
+      "alias": "cornmeal"
+    },
+    {
+      "ingredients_id": "172",
+      "alias": "cornstarch"
+    },
+    {
+      "ingredients_id": "173",
+      "alias": "cranberries"
+    },
+    {
+      "ingredients_id": "175",
+      "alias": "cream_cheese"
+    },
+    {
+      "ingredients_id": "176",
+      "alias": "cremini_mushrooms"
+    },
+    {
+      "ingredients_id": "178",
+      "alias": "crumbly_cheese"
+    },
+    {
+      "ingredients_id": "181",
+      "alias": "crusty_bread"
+    },
+    {
+      "ingredients_id": "182",
+      "alias": "cucumber"
+    },
+    {
+      "ingredients_id": "183",
+      "alias": "cumin"
+    },
+    {
+      "ingredients_id": "187",
+      "alias": "sesame_seed_oil"
+    },
+    {
+      "ingredients_id": "190",
+      "alias": "dijon_mustard"
+    },
+    {
+      "ingredients_id": "192",
+      "alias": "dill"
+    },
+    {
+      "ingredients_id": "194",
+      "alias": "dried_cherries"
+    },
+    {
+      "ingredients_id": "205",
+      "alias": "egg_noodle_pasta"
+    },
+    {
+      "ingredients_id": "208",
+      "alias": "eggplant"
+    },
+    {
+      "ingredients_id": "209",
+      "alias": "eggs"
+    },
+    {
+      "ingredients_id": "219",
+      "alias": "ancient_grain"
+    },
+    {
+      "ingredients_id": "222",
+      "alias": "fattuccine"
+    },
+    {
+      "ingredients_id": "224",
+      "alias": "fennel"
+    },
+    {
+      "ingredients_id": "228",
+      "alias": "feta_cheese"
+    },
+    {
+      "ingredients_id": "233",
+      "alias": "fish_sauce"
+    },
+    {
+      "ingredients_id": "236",
+      "alias": "flour"
+    },
+    {
+      "ingredients_id": "236",
+      "alias": "granola"
+    },
+    {
+      "ingredients_id": "242",
+      "alias": "french_bread"
+    },
+    {
+      "ingredients_id": "253",
+      "alias": "garbanzo_beans"
+    },
+    {
+      "ingredients_id": "254",
+      "alias": "garlic"
+    },
+    {
+      "ingredients_id": "256",
+      "alias": "garlic_powder"
+    },
+    {
+      "ingredients_id": "259",
+      "alias": "ginger"
+    },
+    {
+      "ingredients_id": "261",
+      "alias": "goat_cheese"
+    },
+    {
+      "ingredients_id": "265",
+      "alias": "gouda_cheese"
+    },
+    {
+      "ingredients_id": "268",
+      "alias": "greek_yogurt"
+    },
+    {
+      "ingredients_id": "269",
+      "alias": "green_beans"
+    },
+    {
+      "ingredients_id": "271",
+      "alias": "green_olives"
+    },
+    {
+      "ingredients_id": "278",
+      "alias": "groats"
+    },
+    {
+      "ingredients_id": "280",
+      "alias": "allspice"
+    },
+    {
+      "ingredients_id": "281",
+      "alias": "ground_beef"
+    },
+    {
+      "ingredients_id": "282",
+      "alias": "black_pepper"
+    },
+    {
+      "ingredients_id": "283",
+      "alias": "ground_cardamom"
+    },
+    {
+      "ingredients_id": "292",
+      "alias": "ground_mustard"
+    },
+    {
+      "ingredients_id": "299",
+      "alias": "turmeric"
+    },
+    {
+      "ingredients_id": "300",
+      "alias": "half_and_half"
+    },
+    {
+      "ingredients_id": "301",
+      "alias": "ham"
+    },
+    {
+      "ingredients_id": "305",
+      "alias": "heavy_cream"
+    },
+    {
+      "ingredients_id": "307",
+      "alias": "hoisin_sauce"
+    },
+    {
+      "ingredients_id": "308",
+      "alias": "honey"
+    },
+    {
+      "ingredients_id": "312",
+      "alias": "hot_pepper"
+    },
+    {
+      "ingredients_id": "314",
+      "alias": "hot_sauce"
+    },
+    {
+      "ingredients_id": "315",
+      "alias": "italian_sausage"
+    },
+    {
+      "ingredients_id": "317",
+      "alias": "italian_seasoning"
+    },
+    {
+      "ingredients_id": "319",
+      "alias": "jalapeno_peppers"
+    },
+    {
+      "ingredients_id": "324",
+      "alias": "jasmine_rice"
+    },
+    {
+      "ingredients_id": "325",
+      "alias": "kale"
+    },
+    {
+      "ingredients_id": "326",
+      "alias": "ketchup"
+    },
+    {
+      "ingredients_id": "327",
+      "alias": "kidney_beans"
+    },
+    {
+      "ingredients_id": "331",
+      "alias": "lard"
+    },
+    {
+      "ingredients_id": "333",
+      "alias": "lasagna"
+    },
+    {
+      "ingredients_id": "334",
+      "alias": "lasagna_sheets"
+    },
+    {
+      "ingredients_id": "335",
+      "alias": "leaves"
+    },
+    {
+      "ingredients_id": "337",
+      "alias": "lemon_juice"
+    },
+    {
+      "ingredients_id": "353",
+      "alias": "lentils"
+    },
+    {
+      "ingredients_id": "354",
+      "alias": "lettuce"
+    },
+    {
+      "ingredients_id": "357",
+      "alias": "lime"
+    },
+    {
+      "ingredients_id": "359",
+      "alias": "lime_juice"
+    },
+    {
+      "ingredients_id": "366",
+      "alias": "long_grain_rice"
+    },
+    {
+      "ingredients_id": "367",
+      "alias": "manchego_cheese"
+    },
+    {
+      "ingredients_id": "370",
+      "alias": "maple_syrup"
+    },
+    {
+      "ingredients_id": "374",
+      "alias": "marjoram"
+    },
+    {
+      "ingredients_id": "376",
+      "alias": "masala"
+    },
+    {
+      "ingredients_id": "379",
+      "alias": "mayonnaise"
+    },
+    {
+      "ingredients_id": "381",
+      "alias": "mexican_spice_mix"
+    },
+    {
+      "ingredients_id": "382",
+      "alias": "milk"
+    },
+    {
+      "ingredients_id": "383",
+      "alias": "mint"
+    },
+    {
+      "ingredients_id": "384",
+      "alias": "mire_poix"
+    },
+    {
+      "ingredients_id": "385",
+      "alias": "monterey_jack_cheese"
+    },
+    {
+      "ingredients_id": "390",
+      "alias": "mozzarella_cheese"
+    },
+    {
+      "ingredients_id": "391",
+      "alias": "mushrooms"
+    },
+    {
+      "ingredients_id": "392",
+      "alias": "bell_mushrooms"
+    },
+    {
+      "ingredients_id": "395",
+      "alias": "mustard_greens"
+    },
+    {
+      "ingredients_id": "396",
+      "alias": "mustard_seeds"
+    },
+    {
+      "ingredients_id": "398",
+      "alias": "oranges"
+    },
+    {
+      "ingredients_id": "400",
+      "alias": "lard"
+    },
+    {
+      "ingredients_id": "401",
+      "alias": "nutmeg"
+    },
+    {
+      "ingredients_id": "404",
+      "alias": "oats"
+    },
+    {
+      "ingredients_id": "407",
+      "alias": "olive_oil"
+    },
+    {
+      "ingredients_id": "409",
+      "alias": "olives"
+    },
+    {
+      "ingredients_id": "411",
+      "alias": "onion_powder"
+    },
+    {
+      "ingredients_id": "413",
+      "alias": "onions"
+    },
+    {
+      "ingredients_id": "414",
+      "alias": "orange"
+    },
+    {
+      "ingredients_id": "415",
+      "alias": "orange_juice"
+    },
+    {
+      "ingredients_id": "416",
+      "alias": "oregano"
+    },
+    {
+      "ingredients_id": "419",
+      "alias": "orzo"
+    },
+    {
+      "ingredients_id": "421",
+      "alias": "pancetta"
+    },
+    {
+      "ingredients_id": "422",
+      "alias": "panko"
+    },
+    {
+      "ingredients_id": "423",
+      "alias": "paprika"
+    },
+    {
+      "ingredients_id": "425",
+      "alias": "parmesan_cheese"
+    },
+    {
+      "ingredients_id": "426",
+      "alias": "parmigiano"
+    },
+    {
+      "ingredients_id": "427",
+      "alias": "parsley"
+    },
+    {
+      "ingredients_id": "428",
+      "alias": "pasilla_bajio_peppers"
+    },
+    {
+      "ingredients_id": "429",
+      "alias": "pasta"
+    },
+    {
+      "ingredients_id": "436",
+      "alias": "peanut_butter"
+    },
+    {
+      "ingredients_id": "437",
+      "alias": "peanuts"
+    },
+    {
+      "ingredients_id": "438",
+      "alias": "pearled_barley"
+    },
+    {
+      "ingredients_id": "439",
+      "alias": "pecans"
+    },
+    {
+      "ingredients_id": "440",
+      "alias": "pecorino_cheese"
+    },
+    {
+      "ingredients_id": "442",
+      "alias": "pepper"
+    },
+    {
+      "ingredients_id": "443",
+      "alias": "pepper_flakes"
+    },
+    {
+      "ingredients_id": "444",
+      "alias": "peppercorns"
+    },
+    {
+      "ingredients_id": "445",
+      "alias": "peppers"
+    },
+    {
+      "ingredients_id": "446",
+      "alias": "perciatelli"
+    },
+    {
+      "ingredients_id": "447",
+      "alias": "pesto"
+    },
+    {
+      "ingredients_id": "448",
+      "alias": "pickle_juice"
+    },
+    {
+      "ingredients_id": "450",
+      "alias": "pickles"
+    },
+    {
+      "ingredients_id": "451",
+      "alias": "pie_dough"
+    },
+    {
+      "ingredients_id": "452",
+      "alias": "pine_nuts"
+    },
+    {
+      "ingredients_id": "454",
+      "alias": "pinto_beans"
+    },
+    {
+      "ingredients_id": "455",
+      "alias": "pistachios"
+    },
+    {
+      "ingredients_id": "456",
+      "alias": "pita_bread"
+    },
+    {
+      "ingredients_id": "458",
+      "alias": "pizza_dough"
+    },
+    {
+      "ingredients_id": "459",
+      "alias": "pizza_sauce"
+    },
+    {
+      "ingredients_id": "463",
+      "alias": "pork"
+    },
+    {
+      "ingredients_id": "464",
+      "alias": "pork_butt_roast"
+    },
+    {
+      "ingredients_id": "465",
+      "alias": "pork_chop"
+    },
+    {
+      "ingredients_id": "472",
+      "alias": "potatoes"
+    },
+    {
+      "ingredients_id": "475",
+      "alias": "prunes"
+    },
+    {
+      "ingredients_id": "476",
+      "alias": "queso_cheese"
+    },
+    {
+      "ingredients_id": "478",
+      "alias": "quinoa"
+    },
+    {
+      "ingredients_id": "480",
+      "alias": "radishes"
+    },
+    {
+      "ingredients_id": "481",
+      "alias": "raisins"
+    },
+    {
+      "ingredients_id": "482",
+      "alias": "raspberries"
+    },
+    {
+      "ingredients_id": "483",
+      "alias": "read_flour"
+    },
+    {
+      "ingredients_id": "487",
+      "alias": "red_onions"
+    },
+    {
+      "ingredients_id": "493",
+      "alias": "red_rice"
+    },
+    {
+      "ingredients_id": "495",
+      "alias": "red_russian_kale"
+    },
+    {
+      "ingredients_id": "498",
+      "alias": "red_wine"
+    },
+    {
+      "ingredients_id": "499",
+      "alias": "red_wine_vinegar"
+    },
+    {
+      "ingredients_id": "500",
+      "alias": "rice"
+    },
+    {
+      "ingredients_id": "502",
+      "alias": "rice_noodles"
+    },
+    {
+      "ingredients_id": "506",
+      "alias": "rice_wine_vinegar"
+    },
+    {
+      "ingredients_id": "508",
+      "alias": "ricotta_cheese"
+    },
+    {
+      "ingredients_id": "512",
+      "alias": "root_ginger"
+    },
+    {
+      "ingredients_id": "513",
+      "alias": "rosemary"
+    },
+    {
+      "ingredients_id": "515",
+      "alias": "round_ginger"
+    },
+    {
+      "ingredients_id": "519",
+      "alias": "russet_potatoes"
+    },
+    {
+      "ingredients_id": "520",
+      "alias": "sage"
+    },
+    {
+      "ingredients_id": "521",
+      "alias": "salsa"
+    },
+    {
+      "ingredients_id": "522",
+      "alias": "salt"
+    },
+    {
+      "ingredients_id": "524",
+      "alias": "sambor_powder"
+    },
+    {
+      "ingredients_id": "525",
+      "alias": "sardines"
+    },
+    {
+      "ingredients_id": "526",
+      "alias": "sausage"
+    },
+    {
+      "ingredients_id": "528",
+      "alias": "scallions"
+    },
+    {
+      "ingredients_id": "532",
+      "alias": "serrano_peppers"
+    },
+    {
+      "ingredients_id": "533",
+      "alias": "sesame_oil"
+    },
+    {
+      "ingredients_id": "535",
+      "alias": "sesame_seeds"
+    },
+    {
+      "ingredients_id": "538",
+      "alias": "shallots"
+    },
+    {
+      "ingredients_id": "540",
+      "alias": "sheeps_cheese"
+    },
+    {
+      "ingredients_id": "542",
+      "alias": "sherry"
+    },
+    {
+      "ingredients_id": "544",
+      "alias": "sherry_vinegar"
+    },
+    {
+      "ingredients_id": "545",
+      "alias": "short_grain_rice"
+    },
+    {
+      "ingredients_id": "546",
+      "alias": "shredded_cheddar"
+    },
+    {
+      "ingredients_id": "547",
+      "alias": "shredded_cheese"
+    },
+    {
+      "ingredients_id": "549",
+      "alias": "monterey_jack_cheese"
+    },
+    {
+      "ingredients_id": "550",
+      "alias": "shrimp"
+    },
+    {
+      "ingredients_id": "553",
+      "alias": "sliced_almonds"
+    },
+    {
+      "ingredients_id": "555",
+      "alias": "slivered_almonds"
+    },
+    {
+      "ingredients_id": "556",
+      "alias": "smoked_ham"
+    },
+    {
+      "ingredients_id": "557",
+      "alias": "smoked_paprika"
+    },
+    {
+      "ingredients_id": "558",
+      "alias": "soba_noodles"
+    },
+    {
+      "ingredients_id": "559",
+      "alias": "sorghum_grain"
+    },
+    {
+      "ingredients_id": "560",
+      "alias": "sour_cream"
+    },
+    {
+      "ingredients_id": "564",
+      "alias": "soy_sauce"
+    },
+    {
+      "ingredients_id": "565",
+      "alias": "spicy_mustard"
+    },
+    {
+      "ingredients_id": "567",
+      "alias": "spinach"
+    },
+    {
+      "ingredients_id": "568",
+      "alias": "sriracha"
+    },
+    {
+      "ingredients_id": "571",
+      "alias": "star_anise"
+    },
+    {
+      "ingredients_id": "572",
+      "alias": "steak"
+    },
+    {
+      "ingredients_id": "577",
+      "alias": "sugar"
+    },
+    {
+      "ingredients_id": "580",
+      "alias": "sunflower_seeds"
+    },
+    {
+      "ingredients_id": "582",
+      "alias": "sweet_corn"
+    },
+    {
+      "ingredients_id": "583",
+      "alias": "italian_sausage"
+    },
+    {
+      "ingredients_id": "585",
+      "alias": "sweet_peppers"
+    },
+    {
+      "ingredients_id": "586",
+      "alias": "sweet_pickle_relish"
+    },
+    {
+      "ingredients_id": "588",
+      "alias": "sweet_potatoes"
+    },
+    {
+      "ingredients_id": "590",
+      "alias": "taco_shells"
+    },
+    {
+      "ingredients_id": "592",
+      "alias": "tahini_sauce"
+    },
+    {
+      "ingredients_id": "593",
+      "alias": "thai_chili_pepper"
+    },
+    {
+      "ingredients_id": "594",
+      "alias": "thai_red_curry_paste"
+    },
+    {
+      "ingredients_id": "595",
+      "alias": "thyme"
+    },
+    {
+      "ingredients_id": "602",
+      "alias": "tortilla"
+    },
+    {
+      "ingredients_id": "603",
+      "alias": "tortilla_chips"
+    },
+    {
+      "ingredients_id": "606",
+      "alias": "turmeric"
+    },
+    {
+      "ingredients_id": "607",
+      "alias": "tzatziki"
+    },
+    {
+      "ingredients_id": "608",
+      "alias": "vanilla"
+    },
+    {
+      "ingredients_id": "610",
+      "alias": "vegetable_oil"
+    },
+    {
+      "ingredients_id": "613",
+      "alias": "vegetable_stock"
+    },
+    {
+      "ingredients_id": "614",
+      "alias": "vinegar"
+    },
+    {
+      "ingredients_id": "616",
+      "alias": "walnuts"
+    },
+    {
+      "ingredients_id": "617",
+      "alias": "toasted_nuts"
+    },
+    {
+      "ingredients_id": "618",
+      "alias": "walnuts"
+    },
+    {
+      "ingredients_id": "619",
+      "alias": "water"
+    },
+    {
+      "ingredients_id": "621",
+      "alias": "wheat_berries"
+    },
+    {
+      "ingredients_id": "622",
+      "alias": "wheat_flour"
+    },
+    {
+      "ingredients_id": "624",
+      "alias": "whipping_cream"
+    },
+    {
+      "ingredients_id": "625",
+      "alias": "whiskey"
+    },
+    {
+      "ingredients_id": "626",
+      "alias": "white_beans"
+    },
+    {
+      "ingredients_id": "629",
+      "alias": "white_cheddar"
+    },
+    {
+      "ingredients_id": "632",
+      "alias": "white_flour"
+    },
+    {
+      "ingredients_id": "633",
+      "alias": "white_miso"
+    },
+    {
+      "ingredients_id": "635",
+      "alias": "white_onion"
+    },
+    {
+      "ingredients_id": "637",
+      "alias": "white_onions"
+    },
+    {
+      "ingredients_id": "638",
+      "alias": "beans"
+    },
+    {
+      "ingredients_id": "641",
+      "alias": "white_rice"
+    },
+    {
+      "ingredients_id": "644",
+      "alias": "white_vinegar"
+    },
+    {
+      "ingredients_id": "645",
+      "alias": "white_wine"
+    },
+    {
+      "ingredients_id": "646",
+      "alias": "white_wine_vinegar"
+    },
+    {
+      "ingredients_id": "648",
+      "alias": "whole_milk"
+    },
+    {
+      "ingredients_id": "649",
+      "alias": "wheat_bread"
+    },
+    {
+      "ingredients_id": "650",
+      "alias": "tortilla"
+    },
+    {
+      "ingredients_id": "651",
+      "alias": "wild_rice"
+    },
+    {
+      "ingredients_id": "653",
+      "alias": "worcestershire_sauce"
+    },
+    {
+      "ingredients_id": "656",
+      "alias": "yeast"
+    },
+    {
+      "ingredients_id": "657",
+      "alias": "yellow_mustard"
+    },
+    {
+      "ingredients_id": "658",
+      "alias": "yellow_onion"
+    },
+  ]
+}
